@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+{% block content %}
+<!--Contact Form Start-->
+    <section class="home-section align-items ">
+        <div class="row">
+            <div class="section-title">
+                <h2>CONTACT ME</h2>
+            </div>
+        </div>
+            <section>
+                    <form method="POST" action="">
+                        {{ form.hidden_tag() }}
+                        <fieldset class="form-group">
+                            <div class="form-group">
+                                <div class="form-group">
+                                    {{ form.fullname.label(class="form-control-label") }}
+                                    {% if form.fullname.errors %}
+                                        {{ form.fullname(class="form-control form-control-lg is-invalid") }}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.fullname.errors %}
+                                                <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        {{ form.fullname(class="form-control form-control-lg") }}
+                                    {% endif %}
+                                </div>
+
+                                <div class="form-group">
+                                    {{ form.email.label(class="form-control-label") }}
+                                    {% if form.email.errors %}
+                                        {{ form.email(class="form-control form-control-lg is-invalid") }}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.email.errors %}
+                                                <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        {{ form.email(class="form-control form-control-lg") }}
+                                    {% endif %}
+                                </div>
+
+                                <div class="form-group">
+                                    {{ form.your_message.label(class="form-control-label") }}
+                                    {{ form.your_message(class="form-control form-control-lg") }}
+                                </div>
+
+                                <div class="form-group">
+                                    {{ form.submit(class="btn btn-outline-info") }}
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+            </section>
+    </section>
+<!--Contact Form end-->
+{% endblock content %}

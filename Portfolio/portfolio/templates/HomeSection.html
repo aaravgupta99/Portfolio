@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <!--Home section Start-->
+    <section class="home-section align-items-center ">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="home-text">
+                    <p>Hello, I'm</p>
+                    <h1>{{ Name }}</h1>
+                    <h2>{{ Description }}</h2>
+                    <button onclick="f1()" class="btn">
+                        <a class="brn" onclick="f1()" href="{{ url_for('moreaboutme') }}">More About Me</a>
+                    </button>
+
+                    <button onclick="f1()" class="btn">
+                        <a class="brn" href="{{ url_for('projects') }}">Projects</a>
+                    </button>
+
+                    <button onclick="f1()" class="btn">
+                        <a class="brn" href="{{ url_for('contact') }}">Contact Me</a>
+                    </button>
+
+                </div>
+
+                <div class="home-img">
+                    <div class="img-box">
+                        <img src="static/images/Screenshot 2021-08-27 160937.jpg" alt="profile-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Home section End-->
+{% endblock %}

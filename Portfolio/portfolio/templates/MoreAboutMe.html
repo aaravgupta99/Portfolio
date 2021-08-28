@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+{% block content %}
+ <!--About section start-->
+    <section class="about-section sec-padding">
+
+        <div class="container">
+            <div class="row">
+                <div class="section-title">
+                    <h2>ABOUT ME</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="about-img">
+                    <div class="about-text">
+                        <img src="static/images/about.png" class="abt">
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p>I am a 4th year undergraduate with
+                      robust problem-solving skills and
+                      excellent communication skills.
+                      I am result-oriented , who keeps the
+                      end goal in mind and knows which
+                      resources it will take to get there.
+                      I majorly believe in the power of networking
+                      and wish to acquire a particular set of skills
+                      that allow me to become a scalable software developer.
+                    </p>
+                    <h3>skills</h3>
+                    <div class="skills">
+                        {% for skill in skills %}
+                            <div class="skill-item">{{ skill }}</div>
+                        {% endfor %}
+                    </div>
+
+                    <div class="about-tabs">
+                        <button type="button" class="tab-item" data-target="education">EDUCATION</button>
+                        <div class="timeline-item">
+                            <span class="date">2018-2022</span>
+                            <h4>Bachelors in Technolgy- <span>Punjab Engineering College</span></h4>
+                            <p> Pursuing B.tech at Punjab Engineering College in the field of Computer Science</p>
+                            <br>
+                            <h4>High School - <span>Jayshree Periwal High School</span></h4>
+                            <p>Pursued Science till Class 12 , CBSE</p>
+                        </div>
+
+                        <button type="button" class="tab-item" data-target="experience">EXPERIENCE</button>
+                            <h4>Web Development Intern</h4>
+                            <span class="date">Simplify3x Software Pvt. Ltd.<br>
+                                January 2021 - July 2021</span>
+                            <p>
+
+                                Technologies used:<br>
+                                Back-end : JavaScript, NodeJs<br>
+                                Database : MongoDB
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--Education Start-->
+                <div class="tab-content" id="education">
+                    <div class="timeline">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--About section end-->
+{% endblock %}
